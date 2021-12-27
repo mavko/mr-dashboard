@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 import {
+	CheckIcon,
 	DownloadIcon,
 	FilterIcon,
 	HeartIcon,
@@ -88,90 +89,105 @@ function Tables() {
 
 	return (
 		<>
-			<TableContainer className='mb-8 mt-20 relative z-0'>
-				<div className=' flex flex-wrap items-center px-3 bg-white dark:bg-gray-800 mx-auto w-full py-5 text-purple-600 dark:text-purple-300'>
-					<div className='relative w-full px-4 max-w-full flex-grow flex-1'>
+			<TableContainer className='mb-8 md:mt-20 relative z-0'>
+				<div className='flex flex-col px-5 space-y-5 md:space-y-0 md:flex-row md:items-center md:align-middle md:justify-between bg-white dark:bg-gray-800 py-5 text-blue-600 dark:text-purple-300'>
+					<div className='justify-start flex-auto'>
 						<span className='font-sans text-3xl font-weight-black text-gray-900 dark:text-white'>
 							Games
 						</span>
 					</div>
 					{/* <!-- Search input --> */}
-					<div className='flex  flex-1'>
-						<div className='relative w-full rounded-full focus-within:text-purple-500 mx-3'>
+					<div className='flex flex-auto justify-between md:items-center md:mx-auto md:justify-center'>
+						<div className='rounded-full focus-within:text-blue-600 relative mr-2'>
 							<div className='absolute inset-y-0 flex items-center pl-2'>
 								<SearchIcon className='w-4 h-4' aria-hidden='true' />
 							</div>
 							<Input
 								className='pl-8 text-gray-700 rounded-full'
-								placeholder='Search for projects'
+								placeholder='Search for games..'
 								aria-label='Search'
 							/>
 						</div>
 						{/* filter search */}
-						<button
-							className='border-2 border-purple-600 rounded-lg px-1 text-purple-400 cursor-pointer hover:bg-purple-600 hover:text-purple-200 transition duration-100 inline-flex items-center'
-							onClick={handleFilterClick}>
-							<FilterIcon className='w-5 h-4 align-middle ' />
-						</button>
-						<Dropdown
-							align='top'
-							isOpen={isFilterMenuOpen}
-							onClose={() => setIsFilterMenuOpen(false)}
-							className='z-50 p-5'>
-							<div className='flex justify-between align-middle items-center'>
-								<span className='justify-start text-medium font-weight-bold'>
-									Filters
-								</span>
-								<button className='justify-end outline-none border-none'>
-									<XCircleIcon className='w-8 h-8' />
-								</button>
-							</div>
-							<div className='grid gap-4 grid-cols-2 grid-rows-3 my-3'>
-								<Select className='mt-1 rounded-lg'>
-									<option>Genre</option>
-									<option>$1,000</option>
-									<option>$5,000</option>
-								</Select>
-								<Select className='mt-1 rounded-lg'>
-									<option>Date</option>
-									<option>$1,000</option>
-									<option>$5,000</option>
-								</Select>
-								<Select className='mt-1 rounded-lg'>
-									<option>Devices</option>
-									<option>$1,000</option>
-									<option>$5,000</option>
-								</Select>
-								<Select className='mt-1 rounded-lg'>
-									<option>OS version</option>
-									<option>$1,000</option>
-									<option>$5,000</option>
-								</Select>
-								<Select className='mt-1 rounded-lg'>
-									<option>Country</option>
-									<option>$1,000</option>
-									<option>$5,000</option>
-								</Select>
-								<Select className='mt-1 rounded-lg active:bg-purple-500'>
-									<option>Technology</option>
-									<option>$1,000</option>
-									<option>$5,000</option>
-								</Select>
-							</div>
-						</Dropdown>
+						<div className='relative'>
+							<button
+								className='border-2 border-purple-500 rounded-lg p-1 text-purple-400 cursor-pointer hover:bg-blue-600 active:bg-blue-600 hover:text-purple-200 transition duration-100 inline-flex items-center align-middle'
+								onClick={handleFilterClick}>
+								<FilterIcon className='w-5 h-4' />
+							</button>
+							<Dropdown
+								align='right'
+								isOpen={isFilterMenuOpen}
+								onClose={() => setIsFilterMenuOpen(false)}
+								className='z-50 p-8'>
+								<header className='flex justify-between align-middle items-center mb-3'>
+									<span className='justify-start text-medium font-weight-bold text-lg'>
+										Filters
+									</span>
+									<button className='justify-end outline-none border-none'>
+										<XCircleIcon className='w-8 h-8' />
+									</button>
+								</header>
+								<div className='grid gap-4 sm:grid-cols-2 sm:grid-rows-3 my-5'>
+									<Select className='mt-1 rounded-lg'>
+										<option>Genre</option>
+										<option>$1,000</option>
+										<option>$5,000</option>
+									</Select>
+									<Select className='mt-1 rounded-lg'>
+										<option>Date</option>
+										<option>$1,000</option>
+										<option>$5,000</option>
+									</Select>
+									<Select className='mt-1 rounded-lg'>
+										<option>Devices</option>
+										<option>$1,000</option>
+										<option>$5,000</option>
+									</Select>
+									<Select className='mt-1 rounded-lg'>
+										<option>OS version</option>
+										<option>$1,000</option>
+										<option>$5,000</option>
+									</Select>
+									<Select className='mt-1 rounded-lg'>
+										<option>Country</option>
+										<option>$1,000</option>
+										<option>$5,000</option>
+									</Select>
+									<Select className='mt-1 rounded-lg active:bg-blue-600'>
+										<option>Technology</option>
+										<option>Facebook Login</option>
+										<option>Chartboost</option>
+										<option>Optimizely</option>
+										<option>New Relic</option>
+										<option>FreshWorks</option>
+									</Select>
+								</div>
+								<footer className='flex justify-between align-middle items-center pt-3'>
+									<span className='justify-start text-medium font-weight-bold'>
+										Clear all
+									</span>
+									<button className='justify-end outline-none border-none flex items-center align-middle'>
+										Save
+										<CheckIcon className='w-4 h-4' />
+									</button>
+								</footer>
+							</Dropdown>
+						</div>
 					</div>
+
 					{/* show search results + save + share */}
-					<div className='relative w-full px-4 max-w-full flex-grow flex-1 text-right'>
-						<p className='space-x-2'>
+					<div className='justify-end'>
+						<p className='space-x-2 md:text-right text-base'>
 							Showing <strong>{resultsPerPage}</strong> out of
 							<strong>{totalResults}</strong> results
 						</p>
-						<div className='mb-2 flex justify-end'>
-							<button className='py-1 rounded-xl text-sm font-medium text-blue-400 transition-all inline-flex items-center space-x-2 mr-5'>
+						<div className='md:flex md:flex-row md:align-middle'>
+							<button className='py-1 rounded-xl text-sm font-medium text-blue-600 transition-all flex align-middle items-center space-x-2 mr-5'>
 								<HeartIcon className='w-3 h-3 align-middle ' />
-								<span>Favorite this query</span>
+								<span>Favorite query</span>
 							</button>
-							<button className='py-1 rounded-xl text-sm font-medium text-blue-400 transition-all inline-flex items-center space-x-2 '>
+							<button className='py-1 rounded-xl text-sm font-medium text-blue-400 transition-all flex align-middle items-center space-x-2 '>
 								<LinkIcon className='w-3 h-3 align-middle ' />
 								<span>Share query link </span>
 							</button>
@@ -193,7 +209,7 @@ function Tables() {
 					<TableBody className='cursor-default'>
 						{dataTable2.map((user, i) => (
 							<TableRow key={i} onClick={openModal}>
-								<TableCell>
+								<TableCell className=''>
 									<div className='flex items-center text-sm'>
 										<Avatar
 											className='hidden mr-3 md:block'
@@ -228,7 +244,7 @@ function Tables() {
 											aria-label='Favorite'
 											className='border border-purple-500 p-1 rounded-lg'>
 											<HeartIcon
-												className='w-5 h-5 text-purple-500'
+												className='w-5 h-5 text-blue-600'
 												aria-hidden='true'
 											/>
 										</Button>
@@ -256,12 +272,12 @@ function Tables() {
 				<Modal
 					isOpen={isModalOpen}
 					onClose={closeModal}
-					className='w-full max-w-screen-lg h-96 mx-20 bg-white dark:bg-gray-900 p-10 rounded-lg relative mt-20 overflow-auto'>
+					className='w-full max-w-screen-lg md:mx-20 bg-white dark:bg-gray-900 p-10 rounded-lg relative md:mt-20 overflow-auto'>
 					<Button
 						layout='link'
 						size='icon'
 						aria-label='Favorite'
-						className='border border-purple-500 bg-purple-500 p-1 rounded-lg absolute top-0 left-0 m-10'>
+						className='border border-purple-500 bg-blue-600 p-1 rounded-lg absolute top-0 left-0 m-10'>
 						<HeartIcon className='w-5 h-5 text-white' aria-hidden='true' />
 					</Button>
 					<ModalHeader className='text-center relative'>
@@ -273,7 +289,7 @@ function Tables() {
 						<h1 className='text-4xl'>Pokemon UNITE</h1>
 					</ModalHeader>
 					<ModalBody className=''>
-						<header className='h-auto w-2/3 grid grid-rows-1 grid-flow-col mx-auto text-center space-x-4'>
+						<header className='h-auto w-2/3 grid grid-rows-5 sm:grid-rows-1 grid-flow-col sm:mx-auto sm:text-center sm:space-x-4 sm:space-y-0 space-y-4'>
 							<div className='flex items-center align-middle space-x-2'>
 								<UserGroupIcon className='h-4 w-4' />
 								<span>The Pokemon Company</span>
@@ -306,15 +322,27 @@ function Tables() {
 											<LinkIcon className='h-4 w-4' />
 										</button>
 									</header>
-									<footer className='flex justify-center flex-no-wrap overflow-x-auto text-center mx-auto space-x-5'>
-										<div className='align-middle items-center flex'>
-											<img src='/assets/details/inmobi.png' alt='' />
+									<footer className='flex flex-col sm:flex-row justify-center flex-no-wrap sm:overflow-x-auto overflow-y-auto text-center mx-auto sm:space-x-5 space-y-5 sm:space-y-0 py-3'>
+										<div className='align-middle items-center flex mx-auto sm:mx-0'>
+											<img
+												src='/assets/details/inmobi.png'
+												alt=''
+												className='object-contain'
+											/>
 										</div>
-										<div className='align-middle items-center flex'>
-											<img src='/assets/details/lightship.png' alt='' />
+										<div className='align-middle items-center flex mx-auto sm:mx-0'>
+											<img
+												src='/assets/details/lightship.png'
+												alt=''
+												className='object-contain'
+											/>
 										</div>
-										<div className='align-middle items-center flex'>
-											<img src='/assets/details/pokemonunity.png' alt='' />
+										<div className='align-middle items-center flex mx-auto sm:mx-0'>
+											<img
+												src='/assets/details/pokemonunity.png'
+												alt=''
+												className='object-contain'
+											/>
 										</div>
 									</footer>
 								</div>
@@ -327,23 +355,26 @@ function Tables() {
 											<DownloadIcon className='h-4 w-4' />
 										</button>
 									</header>
-									<footer className='flex justify-center flex-no-wrap overflow-x-auto text-center mx-auto space-x-5'>
-										<div className='align-middle items-center flex'>
+									<footer className='flex flex-col sm:flex-row justify-center flex-no-wrap sm:overflow-x-auto overflow-y-auto text-center mx-auto sm:space-x-5 space-y-5 sm:space-y-0 py-3'>
+										<div className='align-middle items-center flex mx-auto sm:mx-0'>
 											<img
 												src='/assets/details/pokemonuniteasset1.png'
 												alt=''
+												className='object-contain'
 											/>
 										</div>
-										<div className='align-middle items-center flex'>
+										<div className='align-middle items-center flex mx-auto sm:mx-0'>
 											<img
 												src='/assets/details/pokemonuniteasset2.png'
 												alt=''
+												className='object-contain'
 											/>
 										</div>
-										<div className='align-middle items-center flex'>
+										<div className='align-middle items-center flex mx-auto sm:mx-0'>
 											<img
 												src='/assets/details/pokemonuniteasset3.png'
 												alt=''
+												className='object-contain'
 											/>
 										</div>
 									</footer>

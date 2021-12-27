@@ -34,23 +34,15 @@ function Header() {
 
 	return (
 		<header className='z-40 pt-20 pb-3'>
-			<div className='container flex flex-wrap items-center h-full px-6 mx-auto text-purple-600 dark:text-purple-300'>
-				{/* <!-- Mobile hamburger --> */}
-				<button
-					className='p-1 mr-5 -ml-1 rounded-md lg:hidden focus:outline-none focus:shadow-outline-purple'
-					onClick={toggleSidebar}
-					aria-label='Menu'>
-					<MenuIcon className='w-6 h-6' aria-hidden='true' />
-				</button>
-
-				<div className='relative w-full max-w-full flex-grow flex-1'>
+			<div className='container flex justify-between h-full px-6 mx-auto text-blue-600 dark:text-purple-300 space-x-6'>
+				<div className='w-32'>
 					{mode === 'dark' ? (
 						<img src={'/mixrank_white.svg'} alt='mixrank' />
 					) : (
 						<img src={'/mixrank_dark.svg'} alt='mixrank' />
 					)}
 				</div>
-				<ul className='flex items-center flex-shrink-0 space-x-6'>
+				<ul className='sm:flex items-center flex-shrink-0 space-x-6 justify-end float-right hidden'>
 					{/* <!-- Theme toggler --> */}
 					<li className='flex'>
 						<button
@@ -134,6 +126,13 @@ function Header() {
 						</Dropdown>
 					</li>
 				</ul>
+				{/* <!-- Mobile hamburger --> */}
+				<button
+					className='lg:hidden border-2 border-purple-500 rounded-lg p-1 text-purple-400 cursor-pointer hover:bg-blue-600 active:bg-blue-600 hover:text-purple-200 transition duration-100 inline-flex items-center'
+					onClick={toggleSidebar}
+					aria-label='Menu'>
+					<MenuIcon className='w-6 h-6' aria-hidden='true' />
+				</button>
 			</div>
 		</header>
 	)

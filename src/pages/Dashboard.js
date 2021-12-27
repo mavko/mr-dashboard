@@ -6,9 +6,9 @@ function Dashboard() {
 	return (
 		<>
 			<Tables />
-			<div className='flex flex-row justify-between space-x-4 pb-10'>
-				<div className='flex-none p-2 h-full relative'>
-					<header className='absolute z-10 top-0 inset-x-0 m-5 w-2/3'>
+			<div className='flex flex-col justify-between md:flex-row sm:space-x-4 space-y-10 md:space-y-0 pb-10'>
+				<div className=' relative flex-none'>
+					<header className='absolute z-10 top-0 inset-x-0 m-5 w-2/3 max-w-xs'>
 						<p className='text-white font-weight-normal text-xl leading-8 tracking-wider pt-5 pl-3'>
 							Our latest{' '}
 							<strong className='font-weight-bold text-purple-300 px-1'>
@@ -25,7 +25,7 @@ function Dashboard() {
 					<img src='/assets/report-card.png' alt='' className='h-full' />
 				</div>
 
-				<ChartCard title='Currently Trending' className='rounded-3xl'>
+				<ChartCard title='Currently Trending' className='rounded-lg flex-none'>
 					<div className='flex flex-row flex-no-wrap overflow-auto'>
 						<div className='flex-none p-2'>
 							<img src='/assets/lotr-card.png' alt='' />

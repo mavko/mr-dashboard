@@ -108,7 +108,7 @@ function Forms() {
         <Label>
           <span>Icon left</span>
           {/* <!-- focus-within sets the color for the icon when input is focused --> */}
-          <div className="relative text-gray-500 focus-within:text-purple-600 dark:focus-within:text-purple-400">
+          <div className="relative text-gray-500 focus-within:text-blue-600 dark:focus-within:text-purple-400">
             <input
               className="block w-full pl-10 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
               placeholder="Jane Doe"
@@ -122,7 +122,7 @@ function Forms() {
         <Label className="mt-4">
           <span className="text-gray-700 dark:text-gray-400">Icon right</span>
           {/* <!-- focus-within sets the color for the icon when input is focused --> */}
-          <div className="relative text-gray-500 focus-within:text-purple-600 dark:focus-within:text-purple-400">
+          <div className="relative text-gray-500 focus-within:text-blue-600 dark:focus-within:text-purple-400">
             <input
               className="block w-full pr-10 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
               placeholder="Jane Doe"
@@ -153,7 +153,7 @@ function Forms() {
 
         <Label className="mt-4">
           <span>Button right</span>
-          <div className="relative text-gray-500 focus-within:text-purple-600">
+          <div className="relative text-gray-500 focus-within:text-blue-600">
             <input
               className="block w-full pr-20 mt-1 text-sm text-black dark:text-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray form-input"
               placeholder="Jane Doe"
