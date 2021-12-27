@@ -1,11 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
-import ImageLight from '../assets/img/login-bg.png'
-import ImageDark from '../assets/img/login-office-dark.jpeg'
 import { GithubIcon, TwitterIcon } from '../icons'
 import { Label, Input, Button } from '@windmill/react-ui'
-import { ChevronDoubleRightIcon, LoginIcon } from '@heroicons/react/solid'
+import { ChevronDoubleRightIcon } from '@heroicons/react/solid'
 
 function Login() {
 	return (
@@ -25,14 +22,8 @@ function Login() {
 
 						<img
 							aria-hidden='true'
-							className='object-cover w-full h-full dark:hidden'
-							src={ImageLight}
-							alt='Office'
-						/>
-						<img
-							aria-hidden='true'
-							className='hidden object-cover w-full h-full dark:block'
-							src={ImageDark}
+							className='object-cover w-full h-full'
+							src={'/assets/login-bg.png'}
 							alt='Office'
 						/>
 						<div className='relative'>
