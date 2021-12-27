@@ -54,7 +54,7 @@ function MobileSidebar() {
 					leaveFrom='opacity-100'
 					leaveTo='opacity-0 transform -translate-x-20'>
 					<aside className='fixed inset-y-0 z-50 flex-shrink-0 w-11/12 pa-3 rounded-lg overflow-y-auto left-0 bg-white dark:bg-gray-800 lg:hidden'>
-						<header className='relative z-60 pt-20 pl-5 text-blue-600 dark:text-purple-300 '>
+						<header className='relative z-60 pt-20 pl-5 text-purple-500 dark:text-purple-300 '>
 							<div className='grid grid-rows-4 h-full space-y-5'>
 								<div className='w-32'>
 									{mode === 'dark' ? (
@@ -143,7 +143,7 @@ function MobileSidebar() {
 								{/* <!-- Theme toggler --> */}
 								<div className='flex'>
 									<button
-										className='rounded-md focus:outline-none focus:shadow-outline-purple text-blue-600'
+										className='rounded-md focus:outline-none focus:shadow-outline-purple text-purple-500'
 										onClick={toggleMode}
 										aria-label='Toggle color mode'>
 										{mode === 'dark' ? (

@@ -90,7 +90,7 @@ function Tables() {
 	return (
 		<>
 			<TableContainer className='mb-8 md:mt-20 relative z-0'>
-				<div className='flex flex-col px-5 space-y-5 md:space-y-0 md:flex-row md:items-center md:align-middle md:justify-between bg-white dark:bg-gray-800 py-5 text-blue-600 dark:text-purple-300'>
+				<div className='flex flex-col px-5 space-y-5 md:space-y-0 md:flex-row md:items-center md:align-middle md:justify-between bg-white dark:bg-gray-800 py-5 text-purple-500 dark:text-purple-300'>
 					<div className='justify-start flex-auto'>
 						<span className='font-sans text-3xl font-weight-black text-gray-900 dark:text-white'>
 							Games
@@ -98,7 +98,7 @@ function Tables() {
 					</div>
 					{/* <!-- Search input --> */}
 					<div className='flex flex-auto justify-between md:items-center md:mx-auto md:justify-center'>
-						<div className='rounded-full focus-within:text-blue-600 relative mr-2'>
+						<div className='rounded-full focus-within:text-purple-500 relative mr-2'>
 							<div className='absolute inset-y-0 flex items-center pl-2'>
 								<SearchIcon className='w-4 h-4' aria-hidden='true' />
 							</div>
@@ -111,7 +111,7 @@ function Tables() {
 						{/* filter search */}
 						<div className='relative'>
 							<button
-								className='border-2 border-purple-500 rounded-lg p-1 text-purple-400 cursor-pointer hover:bg-blue-600 active:bg-blue-600 hover:text-purple-200 transition duration-100 inline-flex items-center align-middle'
+								className='border-2 border-purple-500 rounded-lg p-1 text-purple-400 cursor-pointer hover:bg-purple-500 active:bg-purple-500 hover:text-purple-200 transition duration-100 inline-flex items-center align-middle'
 								onClick={handleFilterClick}>
 								<FilterIcon className='w-5 h-4' />
 							</button>
@@ -154,7 +154,7 @@ function Tables() {
 										<option>$1,000</option>
 										<option>$5,000</option>
 									</Select>
-									<Select className='mt-1 rounded-lg active:bg-blue-600'>
+									<Select className='mt-1 rounded-lg active:bg-purple-500'>
 										<option>Technology</option>
 										<option>Facebook Login</option>
 										<option>Chartboost</option>
@@ -183,11 +183,11 @@ function Tables() {
 							<strong>{totalResults}</strong> results
 						</p>
 						<div className='md:flex md:flex-row md:align-middle'>
-							<button className='py-1 rounded-xl text-sm font-medium text-blue-600 transition-all flex align-middle items-center space-x-2 mr-5'>
+							<button className='py-1 rounded-xl text-sm font-medium text-purple-500 transition-all flex align-middle items-center space-x-2 mr-5'>
 								<HeartIcon className='w-3 h-3 align-middle ' />
 								<span>Favorite query</span>
 							</button>
-							<button className='py-1 rounded-xl text-sm font-medium text-blue-400 transition-all flex align-middle items-center space-x-2 '>
+							<button className='py-1 rounded-xl text-sm font-medium text-blue-600 transition-all flex align-middle items-center space-x-2 '>
 								<LinkIcon className='w-3 h-3 align-middle ' />
 								<span>Share query link </span>
 							</button>
@@ -244,7 +244,7 @@ function Tables() {
 											aria-label='Favorite'
 											className='border border-purple-500 p-1 rounded-lg'>
 											<HeartIcon
-												className='w-5 h-5 text-blue-600'
+												className='w-5 h-5 text-purple-500'
 												aria-hidden='true'
 											/>
 										</Button>
@@ -277,14 +277,14 @@ function Tables() {
 						layout='link'
 						size='icon'
 						aria-label='Favorite'
-						className='border border-purple-500 bg-blue-600 p-1 rounded-lg absolute top-0 left-0 m-10'>
+						className='border border-purple-500 bg-purple-500 p-1 rounded-lg absolute top-0 left-0 m-10'>
 						<HeartIcon className='w-5 h-5 text-white' aria-hidden='true' />
 					</Button>
 					<ModalHeader className='text-center relative'>
 						<img
 							src='/assets/pokemonicon.png'
 							alt=''
-							className='w-24 h-24 mx-auto'
+							className='w-24 h-24 mx-auto overflow-hidden rounded-lg'
 						/>
 						<h1 className='text-4xl'>Pokemon UNITE</h1>
 					</ModalHeader>
@@ -314,7 +314,7 @@ function Tables() {
 						<div className='h-64'>
 							<div className=' overflow-y-scroll'>
 								{/* game tech stack */}
-								<div className='mx-auto border-2 rounded-lg border-gray-200 p-5 my-5 '>
+								<div className='mx-auto border-2 rounded-lg border-gray-200 dark:border-gray-600 p-5 my-5 '>
 									<header className='flex justify-between mb-5'>
 										<p className='font-weight-bold text-lg'>Technology</p>
 										<button className='flex items-center align-middle space-x-2 font-weight-bold text-lg'>
@@ -327,27 +327,27 @@ function Tables() {
 											<img
 												src='/assets/details/inmobi.png'
 												alt=''
-												className='object-contain'
+												className='object-contain overflow-hidden rounded-lg'
 											/>
 										</div>
 										<div className='align-middle items-center flex mx-auto sm:mx-0'>
 											<img
 												src='/assets/details/lightship.png'
 												alt=''
-												className='object-contain'
+												className='object-contain overflow-hidden rounded-lg'
 											/>
 										</div>
 										<div className='align-middle items-center flex mx-auto sm:mx-0'>
 											<img
 												src='/assets/details/pokemonunity.png'
 												alt=''
-												className='object-contain'
+												className='object-contain overflow-hidden rounded-lg'
 											/>
 										</div>
 									</footer>
 								</div>
 								{/* any game assets or screens */}
-								<div className='mx-auto border-2 rounded-lg border-gray-200 p-5 my-5'>
+								<div className='mx-auto border-2 rounded-lg border-gray-200 dark:border-gray-600 p-5 my-5'>
 									<header className='flex justify-between mb-5'>
 										<p className='font-weight-bold text-lg'>Assets</p>
 										<button className='flex items-center align-middle space-x-2 font-weight-bold text-lg'>
@@ -360,21 +360,21 @@ function Tables() {
 											<img
 												src='/assets/details/pokemonuniteasset1.png'
 												alt=''
-												className='object-contain'
+												className='object-contain overflow-hidden rounded-lg'
 											/>
 										</div>
 										<div className='align-middle items-center flex mx-auto sm:mx-0'>
 											<img
 												src='/assets/details/pokemonuniteasset2.png'
 												alt=''
-												className='object-contain'
+												className='object-contain overflow-hidden rounded-lg'
 											/>
 										</div>
 										<div className='align-middle items-center flex mx-auto sm:mx-0'>
 											<img
 												src='/assets/details/pokemonuniteasset3.png'
 												alt=''
-												className='object-contain'
+												className='object-contain overflow-hidden rounded-lg'
 											/>
 										</div>
 									</footer>

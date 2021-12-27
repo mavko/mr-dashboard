@@ -34,7 +34,7 @@ function Header() {
 
 	return (
 		<header className='z-40 pt-20 pb-3'>
-			<div className='container flex justify-between h-full px-6 mx-auto text-blue-600 dark:text-purple-300 space-x-6'>
+			<div className='container flex justify-between h-full px-6 mx-auto text-purple-500 dark:text-purple-300 space-x-6'>
 				<div className='w-32'>
 					{mode === 'dark' ? (
 						<img src={'/mixrank_white.svg'} alt='mixrank' />
@@ -128,7 +128,7 @@ function Header() {
 				</ul>
 				{/* <!-- Mobile hamburger --> */}
 				<button
-					className='lg:hidden border-2 border-purple-500 rounded-lg p-1 text-purple-400 cursor-pointer hover:bg-blue-600 active:bg-blue-600 hover:text-purple-200 transition duration-100 inline-flex items-center'
+					className='lg:hidden border-2 border-purple-500 rounded-lg p-1 text-purple-400 cursor-pointer hover:bg-purple-500 active:bg-purple-500 hover:text-purple-200 transition duration-100 inline-flex items-center'
 					onClick={toggleSidebar}
 					aria-label='Menu'>
 					<MenuIcon className='w-6 h-6' aria-hidden='true' />

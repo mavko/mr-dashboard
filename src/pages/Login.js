@@ -68,7 +68,7 @@ function Login() {
 							</Label>
 
 							<button
-								className='mt-4 bg-blue-600 text-white w-full rounded-lg py-3 flex-row flex justify-center items-center text-center'
+								className='mt-4 bg-purple-500 text-white w-full rounded-lg py-3 flex-row flex justify-center items-center text-center'
 								block
 								tag={Link}
 								to='/app'>
@@ -89,14 +89,14 @@ function Login() {
 
 							<p className='mt-4'>
 								<Link
-									className='text-sm font-medium text-blue-600 dark:text-purple-400 hover:underline'
+									className='text-sm font-medium text-purple-500 dark:text-purple-400 hover:underline'
 									to='/forgot-password'>
 									Forgot your password?
 								</Link>
 							</p>
 							<p className='mt-1'>
 								<Link
-									className='text-sm font-medium text-blue-600 dark:text-purple-400 hover:underline'
+									className='text-sm font-medium text-purple-500 dark:text-purple-400 hover:underline'
 									to='/create-account'>
 									Create account
 								</Link>
