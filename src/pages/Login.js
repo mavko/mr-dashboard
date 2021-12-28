@@ -58,14 +58,14 @@ function Login() {
 								/>
 							</Label>
 
-							<button
+							<Button
 								className='mt-4 bg-purple-500 text-white w-full rounded-lg py-3 flex-row flex justify-center items-center text-center'
 								block
 								tag={Link}
 								to='/app'>
 								<span>Log in</span>
 								<ChevronDoubleRightIcon className='h-5 w-5' />
-							</button>
+							</Button>
 
 							<hr className='my-8' />
 

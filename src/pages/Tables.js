@@ -178,9 +178,16 @@ function Tables() {
 
 					{/* show search results + save + share */}
 					<div className='justify-end'>
-						<p className='space-x-2 md:text-right text-base'>
-							Showing <strong>{resultsPerPage}</strong> out of
-							<strong>{totalResults}</strong> results
+						<p className='space-x-2 md:text-right text-md text-gray-500 dark:text-gray-300'>
+							<span>Showing</span>
+							<strong className='text-gray-900 dark:text-gray-100'>
+								{resultsPerPage}
+							</strong>
+							<span>out of</span>
+							<strong className='text-gray-900 dark:text-gray-100'>
+								{totalResults}
+							</strong>
+							<span>results</span>
 						</p>
 						<div className='md:flex md:flex-row md:align-middle'>
 							<button className='py-1 rounded-xl text-sm font-medium text-purple-500 transition-all flex align-middle items-center space-x-2 mr-5'>
