@@ -159,8 +159,9 @@ function Tables() {
 										<option>$1,000</option>
 										<option>$5,000</option>
 									</Select>
-									<Select className='mt-1 rounded-lg active:bg-purple-500'>
-										<option>Technology</option>
+									<Select
+										valid
+										className='mt-1 rounded-lg focus:bg-purple-500 hover:bg-purple-500 hover:text-white focus:text-white'>
 										<option>Facebook Login</option>
 										<option>Chartboost</option>
 										<option>Optimizely</option>

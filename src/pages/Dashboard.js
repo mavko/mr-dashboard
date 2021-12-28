@@ -1,3 +1,4 @@
+import { ChevronRightIcon } from '@heroicons/react/solid'
 import React from 'react'
 import ChartCard from '../components/Chart/ChartCard'
 import Tables from './Tables'
@@ -25,7 +26,14 @@ function Dashboard() {
 					<img src='/assets/report-card.png' alt='' className='h-full' />
 				</div>
 
-				<ChartCard title='Currently Trending' className='rounded-lg flex-none'>
+				<ChartCard className='rounded-lg flex-none'>
+					<header className='flex justify-between dark:text-white text-gray-900 mb-5'>
+						<span className=''>Currently Trending</span>
+						<span className='flex items-center align-middle'>
+							This month <ChevronRightIcon className='h-5 w-5' />
+						</span>
+					</header>
+
 					<div className='flex flex-row flex-no-wrap overflow-auto'>
 						<div className='flex-none p-2'>
 							<img src='/assets/lotr-card.png' alt='' />

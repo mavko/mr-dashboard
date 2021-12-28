@@ -101,7 +101,7 @@ function SidebarContent() {
 				</li>
 				{/* export favorites as pdf/etc */}
 			</ul>
-			<div className='bg-black h-auto py-3 text-center absolute inset-x-0 bottom-0 '>
+			<div className='bg-gray-200 dark:bg-gray-600 h-auto py-3 text-center absolute inset-x-0 bottom-0 '>
 				<button className='mx-auto border-2 border-white text-purple-500 font-weight-bold bg-white rounded-full font-weight-bold text-sm py-2 px-5 flex items-center align-middle space-x-2'>
 					<CloudDownloadIcon className='h-5 w-5' />
 					<span>Export my favorites</span>
