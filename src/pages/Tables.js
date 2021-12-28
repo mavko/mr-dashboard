@@ -11,6 +11,7 @@ import {
 	StarIcon,
 	TrendingUpIcon,
 	UserGroupIcon,
+	VariableIcon,
 	XCircleIcon,
 } from '@heroicons/react/solid'
 
@@ -111,10 +112,14 @@ function Tables() {
 						{/* filter search */}
 						<div className='relative'>
 							<button
-								className='border-2 border-purple-500 rounded-lg p-1 text-purple-400 cursor-pointer hover:bg-purple-500 active:bg-purple-500 hover:text-purple-200 transition duration-100 inline-flex items-center align-middle'
+								className='border-2 border-purple-500 rounded-lg p-1 text-purple-400 cursor-pointer hover:bg-purple-500 active:bg-purple-500 hover:text-purple-200 transition duration-100 inline-flex items-center align-middle relative'
 								onClick={handleFilterClick}>
-								<FilterIcon className='w-5 h-4' />
+								<span
+									aria-hidden='true'
+									className='absolute top-0 right-0 inline-block w-4 h-4 transform translate-x-1 -translate-y-1 bg-purple-600 border-2 border-white rounded-full dark:border-gray-800'></span>
+								<FilterIcon className='w-5 h-5' />
 							</button>
+							<button className='text-xs ml-2'>Clear filters</button>
 							<Dropdown
 								align='right'
 								isOpen={isFilterMenuOpen}
