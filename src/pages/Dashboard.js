@@ -7,30 +7,30 @@ function Dashboard() {
 	return (
 		<>
 			<Tables />
-			<div className='flex flex-col justify-between md:flex-row sm:space-x-4 space-y-10 md:space-y-0 pb-10'>
-				<div className=' relative flex-none'>
-					<header className='absolute z-10 top-0 inset-x-0 m-5 w-2/3 max-w-xs'>
-						<p className='text-white font-weight-normal text-xl leading-8 tracking-wider pt-5 pl-3'>
+			<div className='flex flex-col justify-between pb-10 space-y-10 md:flex-row sm:space-x-4 md:space-y-0'>
+				<div className='relative flex-none '>
+					<header className='absolute inset-x-0 top-0 z-10 w-2/3 max-w-xs m-5'>
+						<p className='pt-5 pl-3 text-xl leading-8 tracking-wider text-white font-weight-normal'>
 							Our latest{' '}
-							<strong className='font-weight-bold text-purple-300 px-1'>
-								Mixrank Mobile Gaming Report
+							<strong className='px-1 text-purple-300 font-weight-bold'>
+								Mobile Gaming Report
 							</strong>
 							is now available for download
 						</p>
 					</header>
-					<footer className='absolute z-10 bottom-0 inset-x-0 m-5 w-full'>
-						<button className='text-white font-weight-bold mb-5 ml-3 py-2 px-4 border-2 border-white rounded-full'>
+					<footer className='absolute inset-x-0 bottom-0 z-10 w-full m-5'>
+						<button className='px-4 py-2 mb-5 ml-3 text-white border-2 border-white rounded-full font-weight-bold'>
 							See the report
 						</button>
 					</footer>
 					<img src='/assets/report-card.png' alt='' className='h-full' />
 				</div>
 
-				<ChartCard className='rounded-lg flex-none'>
-					<header className='flex justify-between dark:text-white text-gray-900 mb-5'>
+				<ChartCard className='flex-none rounded-lg'>
+					<header className='flex justify-between mb-5 text-gray-900 dark:text-white'>
 						<span className=''>Currently Trending</span>
 						<span className='flex items-center align-middle'>
-							This month <ChevronRightIcon className='h-5 w-5' />
+							This month <ChevronRightIcon className='w-5 h-5' />
 						</span>
 					</header>
 

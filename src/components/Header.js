@@ -34,15 +34,15 @@ function Header() {
 
 	return (
 		<header className='z-40 pt-20 pb-3'>
-			<div className='container flex justify-between h-full px-6 mx-auto text-purple-500 dark:text-purple-300 space-x-6'>
+			<div className='container flex justify-between h-full px-6 mx-auto space-x-6 text-purple-500 dark:text-purple-300'>
 				<div className='w-32'>
 					{mode === 'dark' ? (
-						<img src={'/mixrank_white.svg'} alt='mixrank' />
+						<h2 class='text-2xl font-medium'>CoreDataVault</h2>
 					) : (
-						<img src={'/mixrank_dark.svg'} alt='mixrank' />
+						<h2 class='text-2xl font-medium'>CoreDataVault</h2>
 					)}
 				</div>
-				<ul className='sm:flex items-center flex-shrink-0 space-x-6 justify-end float-right hidden'>
+				<ul className='items-center justify-end flex-shrink-0 hidden float-right space-x-6 sm:flex'>
 					{/* <!-- Theme toggler --> */}
 					<li className='flex'>
 						<button
@@ -128,7 +128,7 @@ function Header() {
 				</ul>
 				{/* <!-- Mobile hamburger --> */}
 				<button
-					className='lg:hidden border-2 border-purple-500 rounded-lg p-1 text-purple-400 cursor-pointer hover:bg-purple-500 active:bg-purple-500 hover:text-purple-200 transition duration-100 inline-flex items-center'
+					className='inline-flex items-center p-1 text-purple-400 transition duration-100 border-2 border-purple-500 rounded-lg cursor-pointer lg:hidden hover:bg-purple-500 active:bg-purple-500 hover:text-purple-200'
 					onClick={toggleSidebar}
 					aria-label='Menu'>
 					<MenuIcon className='w-6 h-6' aria-hidden='true' />

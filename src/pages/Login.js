@@ -11,12 +11,12 @@ function Login() {
 				<div className='flex flex-col overflow-y-auto md:flex-row'>
 					<div className='h-32 md:h-auto md:w-1/2'>
 						<div className='relative'>
-							<div className='absolute top-0 pt-10 pl-10 grid grid-rows-5 gap-5 font-sans text-2xl text-white'>
+							<div className='absolute top-0 grid grid-rows-5 gap-5 pt-10 pl-10 font-sans text-2xl text-white'>
 								<p>Target accounts,</p>
 								<p>Vendors,</p>
 								<p>Tech installs,</p>
 								<p>And decision makers.</p>
-								<p>All on mixrank.</p>
+								<p>All on CoreDataVault.</p>
 							</div>
 						</div>
 
@@ -28,9 +28,12 @@ function Login() {
 						/>
 						<div className='relative'>
 							<div className='absolute bottom-0 pb-10 pl-10'>
-								<img src='/mixrank_white.svg' alt='' />
-								<p className='text-white font-sans text-base pt-2'>
-									//:data_driven_decision_making.cfg
+								<h2 className='text-2xl font-medium text-white'>
+									CoreDataVault
+								</h2>
+
+								<p className='pt-2 font-sans text-base text-white'>
+									_data_driven_decision_making
 								</p>
 							</div>
 						</div>
@@ -49,7 +52,7 @@ function Login() {
 								/>
 							</Label>
 
-							<Label className='mt-4'>
+							<Label className='my-4'>
 								<span>Password</span>
 								<Input
 									className='mt-1'
@@ -57,14 +60,16 @@ function Login() {
 									placeholder='***************'
 								/>
 							</Label>
-
+							<p className='text-center text-black dark:text-white'>
+								No account needed
+							</p>
 							<Button
-								className='mt-4 bg-purple-500 text-white w-full rounded-lg py-3 flex-row flex justify-center items-center text-center'
+								className='flex flex-row items-center justify-center w-full py-3 mt-4 text-center text-white bg-purple-500 rounded-lg'
 								block
 								tag={Link}
 								to='/app'>
-								<span>Log in</span>
-								<ChevronDoubleRightIcon className='h-5 w-5' />
+								<span>Press here to start the app</span>
+								<ChevronDoubleRightIcon className='w-5 h-5' />
 							</Button>
 
 							<hr className='my-8' />

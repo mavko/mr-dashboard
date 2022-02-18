@@ -21,7 +21,6 @@ import {
 function MobileSidebar() {
 	const { isSidebarOpen, closeSidebar } = useContext(SidebarContext)
 	const { mode, toggleMode } = useContext(WindmillContext)
-	const { toggleSidebar } = useContext(SidebarContext)
 
 	const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false)
 	const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false)
@@ -53,9 +52,9 @@ function MobileSidebar() {
 					leave='transition ease-in-out duration-150'
 					leaveFrom='opacity-100'
 					leaveTo='opacity-0 transform -translate-x-20'>
-					<aside className='fixed inset-y-0 z-50 flex-shrink-0 w-11/12 pa-3 rounded-lg overflow-y-auto left-0 bg-white dark:bg-gray-800 lg:hidden'>
-						<header className='relative z-60 pt-20 pl-5 text-purple-500 dark:text-purple-300 '>
-							<div className='grid grid-rows-4 h-full space-y-5'>
+					<aside className='fixed inset-y-0 left-0 z-50 flex-shrink-0 w-11/12 overflow-y-auto bg-white rounded-lg pa-3 dark:bg-gray-800 lg:hidden'>
+						<header className='relative pt-20 pl-5 text-purple-500 z-60 dark:text-purple-300 '>
+							<div className='grid h-full grid-rows-4 space-y-5'>
 								<div className='w-32'>
 									{mode === 'dark' ? (
 										<img src={'/mixrank_white.svg'} alt='mixrank' />
@@ -71,7 +70,7 @@ function MobileSidebar() {
 										aria-label='Account'
 										aria-haspopup='true'>
 										<Avatar
-											className='align-middle mr-3'
+											className='mr-3 align-middle'
 											src='https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82'
 											alt=''
 											aria-hidden='true'
@@ -109,7 +108,7 @@ function MobileSidebar() {
 								{/* <!-- Notifications menu --> */}
 								<div className='relative'>
 									<button
-										className='relative rounded-md focus:outline-none focus:shadow-outline-purple flex items-center align-middle'
+										className='relative flex items-center align-middle rounded-md focus:outline-none focus:shadow-outline-purple'
 										onClick={handleNotificationsClick}
 										aria-label='Notifications'
 										aria-haspopup='true'>
@@ -143,16 +142,16 @@ function MobileSidebar() {
 								{/* <!-- Theme toggler --> */}
 								<div className='flex'>
 									<button
-										className='rounded-md focus:outline-none focus:shadow-outline-purple text-purple-500'
+										className='text-purple-500 rounded-md focus:outline-none focus:shadow-outline-purple'
 										onClick={toggleMode}
 										aria-label='Toggle color mode'>
 										{mode === 'dark' ? (
-											<span className=' flex items-center align-middle'>
+											<span className='flex items-center align-middle '>
 												<SunIcon className='w-5 h-5 mr-3' aria-hidden='true' />
 												Light Mode
 											</span>
 										) : (
-											<span className=' flex items-center align-middle'>
+											<span className='flex items-center align-middle '>
 												<MoonIcon className='w-5 h-5 mr-3' aria-hidden='true' />
 												Dark Mode
 											</span>
